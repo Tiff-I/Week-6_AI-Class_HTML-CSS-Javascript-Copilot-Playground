@@ -1,46 +1,373 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-	margin: 0;
-	font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #111827;
+  background: #fafafa;
 }
 
 .site-header {
-	background: #7a7a7d;
-	padding: 0;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  height: 88px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
 }
 
-.header-content {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 32px;
-	height: 80px;
+.nav {
+  width: min(1200px, 90%);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.header-logo {
-	height: 60px;
-	width: auto;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 28px;
+  font-weight: 800;
 }
 
-.header-nav ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	gap: 32px;
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff6478, #8b5cf6);
+  color: white;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
 }
 
-.header-nav a {
-	color: #fff;
-	text-decoration: none;
-	font-size: 1.1rem;
-	font-weight: 500;
-	transition: color 0.2s;
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  color: #667085;
+  font-weight: 600;
 }
 
-.header-nav a:hover {
-	color: #ffd700;
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
 }
 
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 16px 30px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, #ff6478, #8b5cf6);
+  box-shadow: 0 12px 24px rgba(139, 92, 246, 0.25);
+  cursor: pointer;
+}
+
+.hero {
+  width: min(1200px, 90%);
+  min-height: calc(100vh - 88px);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border: 1px solid #fecdd3;
+  border-radius: 999px;
+  background: #fff1f2;
+  color: #667085;
+  font-weight: 600;
+  margin-bottom: 36px;
+}
+
+h1 {
+  max-width: 620px;
+  font-size: clamp(48px, 6vw, 78px);
+  line-height: 1.15;
+  letter-spacing: -0.06em;
+  margin-bottom: 34px;
+  color: #050505;
+}
+
+.subtitle {
+  max-width: 600px;
+  color: #667085;
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.4;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.email-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+input {
+  width: min(380px, 100%);
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 18px 28px;
+  font-size: 18px;
+  outline: none;
+  background: white;
+}
+
+.small-text {
+  color: #667085;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.visual {
+  position: relative;
+  height: 640px;
+}
+
+.phone {
+  position: absolute;
+  right: 90px;
+  top: 60px;
+  width: 330px;
+  height: 610px;
+  border: 14px solid #1f2937;
+  border-radius: 58px;
+  background: white;
+  box-shadow: 0 26px 70px rgba(15, 23, 42, 0.15);
+  padding: 34px 24px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  font-weight: 700;
+}
+
+.phone-card {
+  margin-bottom: 22px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff6478, #8b5cf6);
+  float: left;
+  margin-right: 14px;
+}
+
+.muted {
+  color: #667085;
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+.pill {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.emoji-row {
+  margin-top: 16px;
+}
+
+.floating {
+  position: absolute;
+  min-width: 170px;
+  z-index: 2;
+}
+
+.float-1 {
+  top: 60px;
+  left: 20px;
+}
+
+.float-2 {
+  top: 310px;
+  left: 20px;
+}
+
+.float-3 {
+  top: 210px;
+  right: 0;
+}
+
+.float-4 {
+  bottom: 130px;
+  right: 0;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    height: auto;
+    padding: 18px 0;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 56px 0;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: clamp(44px, 12vw, 64px);
+  }
+
+  .email-row {
+    width: 100%;
+    max-width: 420px;
+    flex-direction: column;
+  }
+
+  .email-row .btn,
+  input {
+    width: 100%;
+  }
+
+  .visual {
+    width: 100%;
+    height: 560px;
+  }
+
+  .phone {
+    left: 50%;
+    right: auto;
+    top: 40px;
+    transform: translateX(-50%);
+    width: min(330px, 88vw);
+    height: 560px;
+  }
+
+  .floating {
+    font-size: 14px;
+    min-width: auto;
+    padding: 14px 16px;
+  }
+
+  .float-1 {
+    top: 10px;
+    left: 0;
+  }
+
+  .float-2 {
+    top: 255px;
+    left: 0;
+  }
+
+  .float-3 {
+    top: 180px;
+    right: 0;
+  }
+
+  .float-4 {
+    bottom: 60px;
+    right: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .nav {
+    width: 92%;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .logo-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .hero {
+    width: 92%;
+    padding-top: 42px;
+  }
+
+  .badge {
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+
+  h1 {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .visual {
+    height: 500px;
+    overflow: hidden;
+  }
+
+  .phone {
+    width: 280px;
+    height: 500px;
+    border-width: 12px;
+    border-radius: 48px;
+    padding: 24px 16px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .floating {
+    transform: scale(0.9);
+  }
+
+  .float-1 {
+    left: -28px;
+  }
+
+  .float-2 {
+    left: -34px;
+  }
+
+  .float-3 {
+    right: -26px;
+  }
+
+  .float-4 {
+    right: -42px;
+  }
+}
