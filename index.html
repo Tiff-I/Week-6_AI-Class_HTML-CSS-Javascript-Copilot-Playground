@@ -3,64 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Together Landing Page</title>
+  <title>Together | Make Plans Faster</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="nav">
-      <div class="logo">
-        <div class="logo-icon">▣</div>
-        Together
-      </div>
+  <header class="header">
+    <div class="container nav">
+      <a href="#" class="logo">
+        <span class="logo-icon">📅</span>
+        <span>Together</span>
+      </a>
 
       <nav class="nav-links">
-        <a href="#">Features</a>
-        <a href="#">How It Works</a>
-        <a href="#">Download</a>
-        <button class="btn">Join Waitlist</button>
+        <a href="#features">Features</a>
+        <a href="#how">How It Works</a>
+        <a href="#download">Download</a>
       </nav>
+
+      <a href="#signup" class="btn nav-btn">Join Waitlist</a>
     </div>
   </header>
 
-  <main class="hero">
-    <section class="hero-content">
-      <div class="badge">✦ Private beta launching soon</div>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge">✦ Private beta launching soon</div>
 
-      <h1>Make plans without the endless group chat.</h1>
+          <h1>Make plans without the endless group chat.</h1>
 
-      <p class="subtitle">
-        Share ideas, vote on plans, sync calendars, and instantly see when everyone's free.
-      </p>
+          <p>
+            Share ideas, vote on plans, sync calendars, and instantly see when
+            everyone's free.
+          </p>
 
-      <form class="email-row">
-        <input type="email" placeholder="Enter your email" />
-        <button class="btn" type="submit">Join Waitlist</button>
-      </form>
+          <form id="signup" class="signup-form">
+            <input type="email" placeholder="Enter your email" required />
+            <button class="btn" type="submit">Join Waitlist</button>
+          </form>
 
-      <p class="small-text">Join 5,000+ early users waiting for access</p>
-    </section>
-
-    <section class="visual" aria-hidden="true">
-      <div class="card floating float-1">🌮 Taco Tuesday?</div>
-      <div class="card floating float-2">🎬 Movie Night</div>
-      <div class="card floating float-3">☀️ Beach Day</div>
-      <div class="card floating float-4">⛰️ Hiking Saturday?</div>
-
-      <div class="phone">
-        <div class="card phone-card">
-          <div class="avatar"></div>
-          <div>Weekend Plans</div>
-          <div class="muted">4 friends available</div>
-          <div class="pill">Saturday 7 PM ✓</div>
+          <span class="social-proof">
+            Join 5,000+ early users waiting for access
+          </span>
         </div>
 
-        <div class="card phone-card">
-          New restaurant idea 🍕
-          <div class="emoji-row">👍 🔥 ❤️</div>
+        <div class="hero-visual">
+          <div class="floating-card card-one">🌮 Taco Tuesday?</div>
+          <div class="floating-card card-two">🎬 Movie Night</div>
+          <div class="floating-card card-three">☀️ Beach Day</div>
+          <div class="floating-card card-four">⛰️ Hiking Saturday?</div>
+
+          <div class="phone">
+            <div class="phone-card">
+              <div class="avatar"></div>
+              <div>
+                <strong>Weekend Plans</strong>
+                <span>4 friends available</span>
+              </div>
+              <small>Saturday 7 PM ✓</small>
+            </div>
+
+            <div class="phone-card idea-card">
+              <strong>New restaurant idea 🍕</strong>
+              <span>👍 🔥 ❤️</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Plan faster, together</h2>
+          <p>Everything your group needs to decide, schedule, and show up.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon">🗳️</div>
+            <h3>Vote on ideas</h3>
+            <p>Let everyone suggest plans and quickly vote on what sounds best.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">📆</div>
+            <h3>Sync calendars</h3>
+            <p>Find the best time automatically without endless availability texts.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">✅</div>
+            <h3>Confirm plans</h3>
+            <p>Lock in the winning idea and keep all details in one clean place.</p>
+          </article>
         </div>
       </div>
     </section>
   </main>
+
+  <footer class="footer" id="download">
+    <div class="container footer-content">
+      <p>© 2026 Together. All rights reserved.</p>
+      <div>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
